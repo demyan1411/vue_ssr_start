@@ -1,0 +1,30 @@
+{
+  "name": "vue-ssr-research",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "server": "webpack --config webpack/webpack.server.config.js",
+    "client": "webpack --config webpack/webpack.client.config.js",
+    "static": "node renderer/renderer.js",
+    "generate": "npm run server && npm run client && npm run static"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.6",
+    "vue-server-renderer": "^2.6.10"
+  },
+  "devDependencies": {
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5",
+    "webpack-merge": "^4.2.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
